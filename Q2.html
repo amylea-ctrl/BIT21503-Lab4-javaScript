@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Q2 - Number Validation</title>
+</head>
+<body>
+  <input type="text" id="userInput" placeholder="Enter a number">
+  <button onclick="checkInput()">Check</button>
+
+  <script>
+    function checkInput() {
+      // Read the value and remove spaces at the start and end
+      var value = document.getElementById("userInput").value.trim();
+
+      // Empty input or text that is not a valid number
+      if (value === "" || isNaN(value)) {
+        alert("Please insert a number!");
+      } else {
+        var number = Number(value);
+        if (number < 10) {
+          alert("The number is lower than 10");
+        } else if (number > 10) {
+          alert("The number is higher than 10");
+        } else {
+          alert("The number is equal to 10");
+        }
+      }
+    }
+  </script>
+</body>
+</html>
